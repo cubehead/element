@@ -133,6 +133,13 @@ export default {
                         </span>) : ''
                       }
                     </div>
+                    <div>
+                      {
+                        column.renderFilterHeader
+                          ? column.renderFilterHeader.call(this._renderProxy, h, { column, $index: cellIndex, store: this.store, _self: this.$parent.$vnode.context })
+                          : ''
+                      }
+                    </div>
                   </th>))
                 }
                 {
